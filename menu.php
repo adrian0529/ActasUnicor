@@ -4,7 +4,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav" style="font-family: 'Open Sans', sans-serif;">
+        <a class="nav-link" href="index.php?c=administracion">Inicio</a>
         <a class="nav-link" href="index.php?c=usuario">Usuarios</a>
         <a class="nav-link" href="index.php?c=acta">Actas</a>
         <a class="nav-link" href="index.php?c=programa">Programas</a>

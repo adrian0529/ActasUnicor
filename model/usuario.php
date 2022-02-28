@@ -19,7 +19,7 @@ class usuario{
 
     public function listar(){
         try {
-            $query = "SELECT * FROM usuarios";
+            $query = "SELECT u.idusuario, u.nombre, u.apellido, u.telefono, u.email, c.titulo FROM usuarios u INNER JOIN cargos c ON u.idcargo = c.idcargo";
             $stm = $this->cnx->prepare($query);
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);

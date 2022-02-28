@@ -34,7 +34,7 @@
                 <th scope="col">APELLIDO</th>
                 <th scope="col">TELÉFONO</th>
                 <th scope="col">EMAIL</th>
-                <th scope="col">ID CARGO</th>
+                <th scope="col">CARGO</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
@@ -47,7 +47,7 @@
                 <td><?php echo $r->apellido; ?></td>
                 <td><?php echo $r->telefono; ?></td>
                 <td><?php echo $r->email; ?></td>
-                <td><?php echo $r->idcargo; ?></td>
+                <td><?php echo $r->titulo; ?></td>
                 <td><a href="?c=usuario&a=viewEdit&id=<?php echo $r->idusuario; ?>"><img src="img/edit_black_24dp.svg"></a></td>
                 <td><a href="?c=usuario&a=eliminar&id=<?php echo $r->idusuario; ?>"><img src="img/delete_black_24dp.svg"></a></td>
             <?php endforeach; ?>

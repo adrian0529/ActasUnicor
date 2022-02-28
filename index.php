@@ -1,6 +1,6 @@
 <?php
 include_once 'config/conexion.php';
-$controller = 'acta';
+$controller = 'administracion';
 
 if(!isset($_REQUEST['c'])){
     
