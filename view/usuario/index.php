@@ -4,17 +4,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card text-white bg-success text-center shadow">
-                <h3>Lista de usuarios</h3>
+            <div class="text-center" style="color: #139511; font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 25px">
+                Usuarios
             </div>
         </div>
     </div>
 </div>
 <br>
 <div class="container-xxl">
-    <form action="buscar.php" method="post" class="row g-3 lead">
+    <form action="?c=usuario&a=buscar" method="post" class="row g-3 lead">
         <div class="col-md-6">
-            <input type="text" name="id" class="form-control" placeholder="Ingrese la identificación">
+            <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Ingrese la identificación">
         </div>
         <div class="d-grid gap-2 col-1">
             <button type="submit" class="btn btn-outline-secondary fw-bold">Buscar</button>

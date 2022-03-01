@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card text-white bg-success text-center shadow">
-                <h3>Lista de cargos</h3>
+            <div class="text-center" style="color: #139511; font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 25px">
+                Cargos
             </div>
         </div>
     </div>

@@ -5,12 +5,14 @@
     <label for="inputAsunto" class="form-label lead fw-bold" style="font-size:25px">Acta N°<?php echo $alm->idacta; ?></label>
 </div>
 <div class="container-xxl">
-<table class="table table-bordered lead">
+<table class="table table-bordered" style="font-family: 'Open Sans', sans-serif;">
     <tr>
         <td scope="col" colspan="2">Asunto: <?php echo $alm->asunto; ?></th>
     </tr>
     <tr>
         <td scope="col">Fecha: <?php echo $alm->fecha; ?></th>
+    </tr>
+    <tr>
         <td scope="col">Id. Responsable: <?php echo $alm->idresponsable; ?></th>
     </tr>
 </table>
