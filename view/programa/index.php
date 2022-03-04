@@ -22,7 +22,7 @@
     </form>
 </div>
 <div class=" container-xxl d-grid gap-2 d-md-flex justify-content-md-end">
-    <a href="?c=nuevo" class="btn btn-success col-2 fw-bold"><img src="img/add_circle_white_24dp.svg"> Nuevo</a>
+    <a href="?c=programa&a=nuevo" class="btn btn-success col-2 fw-bold"><img src="img/add_circle_white_24dp.svg"> Nuevo</a>
 </div>
 <br>
 <div class="container-xxl">
