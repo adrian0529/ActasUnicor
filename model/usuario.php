@@ -48,15 +48,6 @@ class usuario{
         }
     }
 
-    public function validar($data){
-        try {
-            $query = "SELECT * FROM usuarios WHERE idusuario = ?";
-            $this->cnx->prepare($query)->execute(array($data->idusuario));
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
     public function cargarId($id){
         try {
             $query = "SELECT * FROM usuarios WHERE idusuario = ?";

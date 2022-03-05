@@ -11,6 +11,9 @@ class acta{
     public $nombre;
     public $apellido;
     public $titulo;
+    public $id;
+    public $idparticipante;
+    public $descripcion;
 
     public function __construct(){
         try {
@@ -94,7 +97,7 @@ class acta{
 
     public function listarParticipantes($id){
         try {
-            $query = "SELECT idusuario,nombre,apellido,telefono,email,titulo FROM (SELECT u.idusuario,u.nombre,u.apellido,u.telefono,u.email,c.titulo,p.idacta FROM participantes p, usuarios u, cargos c WHERE u.idusuario=p.idparticipante AND u.idcargo=c.idcargo) m WHERE m.idacta = ?";
+            $query = "SELECT id,idusuario,nombre,apellido,telefono,email,titulo FROM (SELECT p.id,u.idusuario,u.nombre,u.apellido,u.telefono,u.email,c.titulo,p.idacta FROM participantes p, usuarios u, cargos c WHERE u.idusuario=p.idparticipante AND u.idcargo=c.idcargo) m WHERE m.idacta = ?";
             $stm = $this->cnx->prepare($query);
             $stm->execute(array($id));
             return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -103,10 +106,61 @@ class acta{
         }
     }
     
-    public function registrarParticipantes(acta $data){
+    public function registrarParticipante(acta $data){
         try {
-            $query = "INSERT INTO participantes (idparticpante, idacta) VALUES (?,?)";
+            $query = "INSERT INTO participantes (idparticipante, idacta) VALUES (?,?)";
             $this->cnx->prepare($query)->execute(array($data->idparticipante, $data->idacta));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function borrarParticipante($id){
+        try {
+            $query = "DELETE FROM participantes WHERE id = ?";
+            $stm = $this->cnx->prepare($query);
+            $stm->execute(array($id));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function cargarUsuariosNoElegidos($id){
+        try {
+            $query = "SELECT * FROM usuarios u LEFT JOIN (SELECT * FROM participantes p WHERE p.idacta = ?) m ON u.idusuario = m.idparticipante WHERE m.idparticipante IS NULL";
+            $stm = $this->cnx->prepare($query);
+            $stm->execute(array($id));
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function listarCompromisos($id){
+        try {
+            $query = "SELECT * FROM compromisos WHERE idacta = ?";
+            $stm = $this->cnx->prepare($query);
+            $stm->execute(array($id));
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function registrarCompromisos(acta $data){
+        try {
+            $query = "INSERT INTO compromisos (descripcion, idacta) VALUES (?,?)";
+            $this->cnx->prepare($query)->execute(array($data->descripcion, $data->idacta));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function borrarCompromiso($id){
+        try {
+            $query = "DELETE FROM compromisos WHERE idcompromiso = ?";
+            $stm = $this->cnx->prepare($query);
+            $stm->execute(array($id));
         } catch (Exception $e) {
             die($e->getMessage());
         }

@@ -60,5 +60,51 @@ class actaController{
         }
         include_once 'view/acta/show.php';
     }
+
+    public function guardarParticipante(){
+        $alm = new acta();
+        $alm->idparticipante = $_POST['participante'];
+        $alm->idacta = $_POST['acta'];
+
+        $this->model->registrarParticipante($alm);
+        
+        if(isset($_POST['acta'])){
+            $alm = $this->model->cargarId($_POST['acta']);
+        }
+        include_once 'view/acta/show.php';
+    }
+
+    public function eliminarParticipante(){
+        $alm = new acta();
+        $this->model->borrarParticipante($_REQUEST['id']);
+
+        if(isset($_REQUEST['id2'])){
+            $alm = $this->model->cargarId($_REQUEST['id2']);
+        }
+        include_once 'view/acta/show.php';
+    }
+
+    public function guardarCompromiso(){
+        $alm = new acta();
+        $alm->descripcion = $_POST['descripcion'];
+        $alm->idacta = $_POST['acta'];
+
+        $this->model->registrarCompromisos($alm);
+        
+        if(isset($_POST['acta'])){
+            $alm = $this->model->cargarId($_POST['acta']);
+        }
+        include_once 'view/acta/show.php';
+    }
+
+    public function eliminarCompromiso(){
+        $alm = new acta();
+        $this->model->borrarCompromiso($_REQUEST['id']);
+
+        if(isset($_REQUEST['id2'])){
+            $alm = $this->model->cargarId($_REQUEST['id2']);
+        }
+        include_once 'view/acta/show.php';
+    }
 }
 ?>

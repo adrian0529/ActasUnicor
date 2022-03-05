@@ -11,21 +11,11 @@
     </div>
 </div>
 <br>
-<div class="container-xxl">
-    <form action="buscar.php" method="post" class="row g-3 lead">
-        <div class="col-md-6">
-            <input type="text" name="id" class="form-control" placeholder="Ingrese el Id del acta">
-        </div>
-        <div class="d-grid gap-2 col-1">
-            <button type="submit" class="btn btn-outline-secondary fw-bold">Buscar</button>
-        </div>
-    </form>
-</div>
-<div class=" container-xxl d-grid gap-2 d-md-flex justify-content-md-end">
+<div class=" container-xxl d-grid gap-2 d-md-flex justify-content-md-end" style="font-family: 'Open Sans', sans-serif;">
     <a href="?c=acta&a=nuevo" class="btn btn-success col-2 fw-bold"><img src="img/add_circle_white_24dp.svg"> Nuevo</a>
 </div>
 <br>
-<div class="container-xxl">
+<div class="container-xxl" style="font-family: 'Open Sans', sans-serif;">
     <table class="table">
         <thead class="table-dark">
             <tr class="text-center">

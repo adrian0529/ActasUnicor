@@ -11,21 +11,11 @@
     </div>
 </div>
 <br>
-<div class="container-xxl">
-    <form action="?c=usuario&a=buscar" method="post" class="row g-3 lead">
-        <div class="col-md-6">
-            <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Ingrese la identificación">
-        </div>
-        <div class="d-grid gap-2 col-1">
-            <button type="submit" class="btn btn-outline-secondary fw-bold">Buscar</button>
-        </div>
-    </form>
-</div>
-<div class=" container-xxl d-grid gap-2 d-md-flex justify-content-md-end">
+<div class=" container-xxl d-grid gap-2 d-md-flex justify-content-md-end" style="font-family: 'Open Sans', sans-serif;">
     <a href="?c=usuario&a=nuevo" class="btn btn-success col-2 fw-bold"><img src="img/add_circle_white_24dp.svg"> Nuevo</a>
 </div>
 <br>
-<div class="container-xxl">
+<div class="container-xxl" style="font-family: 'Open Sans', sans-serif;">
     <table class="table">
         <thead class="table-dark">
             <tr class="text-center">

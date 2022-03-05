@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card text-white bg-success text-center shadow">
+            <div class="card text-white bg-success text-center shadow" style="font-family: 'Open Sans', sans-serif;">
                 <h4>Actualizar acta</h4>
             </div>
         </div>
     </div>
 </div>
 <br>
-<div class="container">
+<div class="container" style="font-family: 'Open Sans', sans-serif;">
     <form action="?c=acta&a=actualizar" method="post" class="row g-3 lead" id="formulario">
         <div class="col-md-12">
             <label for="inputId" class="form-label">Id.</label>

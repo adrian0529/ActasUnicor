@@ -1,7 +1,7 @@
 <?php include_once 'header.php'; ?>
 <?php include_once 'menu.php'; ?>
 <br>
-<div class="container">
+<div class="container" style="font-family: 'Open Sans', sans-serif;">
     <div class="row">
         <div class="col-md-12">
             <div class="card text-white bg-success text-center shadow">
@@ -11,7 +11,7 @@
     </div>
 </div>
 <br>
-<div class="container">
+<div class="container" style="font-family: 'Open Sans', sans-serif;">
     <form action="?c=usuario&a=guardar" method="post" class="row g-3 lead" id="formulario">
         <div class="col-md-12">
             <label for="inputIdentificacion" class="form-label">Identificación</label>
